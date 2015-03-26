@@ -235,9 +235,9 @@ main {
   height: 400px;
 }
 
-.img {
+.frame-container img {
   width: 100%;
-  height: 400px;
+  height: auto;
 }
 
 #carousel-example-generic {
