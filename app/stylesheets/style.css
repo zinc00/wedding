@@ -31,6 +31,10 @@ body.open {
   overflow: hidden;
 }
 
+.carousel-indicators li {
+  visibility: hidden;
+}
+
 .app-bar {
   display: block;
   width: 100%;

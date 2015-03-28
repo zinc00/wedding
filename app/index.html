@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" data-ng-app="wedding">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title> Nirit and Tal: The Wedding </title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -34,13 +34,15 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
     <!-- Page stylesheets -->
     <link rel="stylesheet" href="stylesheets/style.css">
   </head>
 
   <!------------- Body ------------------------>
 
-  <body>
+  <body data-ng-controller="WeddingController as weddingCtrl">
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
@@ -55,15 +57,16 @@
     <nav class="navdrawer-container promote-layer">
       <h4>נווט</h4>
       <ul>
-        <li><a href="who.html">מי?</a></li>
-        <li><a href="when.html">מתי?</a></li>
-        <li><a href="where.html">איפה?</a></li>
-        <li><a href="howmuch.html">כמה?</a></li>
-        <li><a href="confirm.html">אישור הגעה</a></li>
+        <li><a href data-ng-click="weddingCtrl.setTab(1)">מי?</a></li>
+        <li><a href data-ng-click="weddingCtrl.setTab(2)">מתי?</a></li>
+        <li><a href data-ng-click="weddingCtrl.setTab(3)">איפה?</a></li>
+        <li><a href data-ng-click="weddingCtrl.setTab(4)">כמה?</a></li>
+        <li><a href data-ng-click="weddingCtrl.setTab(5)">אישור הגעה</a></li>
       </ul>
     </nav>
 
-    <main>
+    <div>
+    <main class="container-fluid" data-ng-if="weddingCtrl.check(0)">
       <h1 id="welcome">ברוכים הבאים!</h1>
       <p>בשעה טובה, אנחנו מתחתנים.</p>
 
@@ -73,12 +76,19 @@
       <p> מקווים לראותכם! </p>
     </main>
 
+      <who data-ng-if="weddingCtrl.check(1)"></who>
+      <when data-ng-if="weddingCtrl.check(2)"></when>
+      <where data-ng-if="weddingCtrl.check(3)"></where>
+      <how-much data-ng-if="weddingCtrl.check(4)"></how-much>
+      <confirm data-ng-if="weddingCtrl.check(5)"></confirm>
 
+    </div>
 
   </body>
   <!------------- End Body ------------------------>
 
   <script src="scripts/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
 
 <footer dir="ltr">
   <div> Created By: Kis-Pipa © </div>
