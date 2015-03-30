@@ -348,6 +348,12 @@ footer {
   }
 }
 
+@media all and (min-width: 479px) {
+  #narrow-only {
+    visibility: hidden;
+  }
+}
+
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
