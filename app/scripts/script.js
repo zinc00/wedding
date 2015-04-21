@@ -13,22 +13,22 @@
       this.carouselInterval = 4000;
       this.slides = [
         {
-          image: '/images/nirital1.jpg'
+          image: 'images/nirital1.jpg'
         },
         {
-          image: '/images/nirital2.jpg'
+          image: 'images/nirital2.jpg'
         },
         {
-          image: '/images/nirital3.jpg'
+          image: 'images/nirital3.jpg'
         },
         {
-          image: '/images/nirital4.jpg'
+          image: 'images/nirital4.jpg'
         },
         {
-          image: '/images/nirital5.jpg'
+          image: 'images/nirital5.jpg'
         },
         {
-          image: '/images/nirital6.jpg'
+          image: 'images/nirital6.jpg'
         }
       ];
     })
