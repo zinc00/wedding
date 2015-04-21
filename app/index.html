@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Nirit and Tal's wedding">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title> Nirit and Tal: The Wedding </title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -67,28 +67,27 @@
       </ul>
     </nav>
 
-    <div>
-    <main class="container-fluid" data-ng-if="weddingCtrl.check(0)">
-      <h1 id="welcome">ברוכים הבאים!</h1>
-      <p>בשעה טובה, אנחנו מתחתנים.</p>
+    <div class="main">
+      <main class="container-fluid" data-ng-if="weddingCtrl.check(0)">
+        <h1 id="welcome">ברוכים הבאים!</h1>
+        <p>בשעה טובה, אנחנו מתחתנים.</p>
 
-      <p> כאן תוכלו למצוא פרטים אודות החתונה.</p>
-        <p> אנא אשרו הגעה באיזור המתאים, כדי שנוכל לדעת שאתם מגיעים. </p>
+        <p> כאן תוכלו למצוא פרטים אודות החתונה.</p>
+          <p> אנא אשרו הגעה באיזור המתאים, כדי שנוכל לדעת שאתם מגיעים. </p>
 
-      <p> מקווים לראותכם! </p>
-      <p></p>
-      <div class="frame-container">
-        <div id="narrow-only"> לקבלת תחזית שבועית - הטו את המכשיר על צידו</div>
-        <iframe id="forecast_embed" type="text/html" frameborder="0" src="http://forecast.io/embed/#lat=32.070935&lon=34.858718&name=Saba's Well&color=#00aaff&font=Georgia&units=uk"> </iframe>
-      </div>
+        <p> מקווים לראותכם! </p>
+        <p></p>
+        <div class="frame-container">
+          <div id="narrow-only"> לקבלת תחזית שבועית - הטו את המכשיר על צידו</div>
+          <iframe id="forecast_embed" type="text/html" frameborder="0" src="http://forecast.io/embed/#lat=32.070935&lon=34.858718&name=Saba's Well&color=#00aaff&font=Georgia&units=uk"> </iframe>
+        </div>
+      </main>
 
-    </main>
-
-      <who data-ng-if="weddingCtrl.check(1)"></who>
-      <when data-ng-if="weddingCtrl.check(2)"></when>
-      <where data-ng-if="weddingCtrl.check(3)"></where>
-      <how-much data-ng-if="weddingCtrl.check(4)"></how-much>
-      <confirm data-ng-if="weddingCtrl.check(5)"></confirm>
+        <who data-ng-if="weddingCtrl.check(1)"></who>
+        <when data-ng-if="weddingCtrl.check(2)"></when>
+        <where data-ng-if="weddingCtrl.check(3)"></where>
+        <how-much data-ng-if="weddingCtrl.check(4)"></how-much>
+        <confirm data-ng-if="weddingCtrl.check(5)"></confirm>
 
     </div>
 
