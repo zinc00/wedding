@@ -68,7 +68,9 @@
 
   <!-- Define app icon for each platform. -->
   <icon src="icon.png" gap:platform="winphone"/>
-  <icon src="images/touch/chrome-touch-icon-192x192.png" gap:platform="android"    width="192" height="192" />
+  <icon src="images/touch/chrome-touch-icon-192x192.png" gap:platform="android"    density="ldpi" />
+  <icon src="images/touch/chrome-touch-icon-192x192.png" gap:platform="android"    density="mdpi" />
+  <icon src="images/touch/chrome-touch-icon-192x192.png" gap:platform="android"    density="hdpi" />
   <icon src="images/touch/apple-touch-icon.png"   gap:platform="ios"        width="152" height="152" />
 
   <!-- Define app splash screen for each platform. -->
